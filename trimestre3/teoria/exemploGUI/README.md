@@ -23,7 +23,7 @@ en el segundo metodo vamos a pasar de esto
 
 _BorderLayout_
 
-si borramos uno, se amplia el espacio del otro o los otros
+si borramos uno, se amplia el espacio del otro o los otros y desaparece el que borramos
 
 ```java
     public void distribucionBorderLayout(){
