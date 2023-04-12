@@ -21,4 +21,20 @@ en el segundo metodo vamos a pasar de esto
         marco.setSize(600, 400);
 ```
 
-> la parte 3 no funciona bien, no se porque no funcionar --> **PREGUNTAR**
+_BorderLayout_
+
+si borramos uno, se amplia el espacio del otro o los otros
+
+```java
+    public void distribucionBorderLayout(){
+        iniciarComponentes();
+        panel.setLayout(new BorderLayout());
+        panel.add(boton1, BorderLayout.NORTH);
+        panel.add(boton2, BorderLayout.SOUTH);
+        panel.add(boton3, BorderLayout.CENTER);
+        panel.add(boton4,  BorderLayout.EAST);
+        panel.add(boton5,  BorderLayout.WEST);
+        marco.add(panel);
+        pecharVentana();
+    }
+```

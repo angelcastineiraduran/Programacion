@@ -34,6 +34,7 @@ public class Layouts {
         panel.add(boton3);
         panel.add(boton4);
         panel.add(boton5);
+        marco.add(panel);
         
         marco.setDefaultCloseOperation(3);
         marco.setLocationRelativeTo(marco);
@@ -53,6 +54,7 @@ public class Layouts {
         panel.add(boton3);
         panel.add(boton4);
         panel.add(boton5);
+        marco.add(panel);
         
         pecharVentana();
         
@@ -74,6 +76,45 @@ public class Layouts {
         marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         marco.setLocationRelativeTo(marco);
         marco.setVisible(true);
+    }
+    /**
+     * metodo aplicando otro layout
+     * tendra una distribucion vertical de los botones
+     */
+    public void distribuidorBoxLayout(){
+        iniciarComponentes();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        panel.add(boton1);
+        panel.add(boton2);
+        panel.add(boton3);
+        panel.add(boton4);
+        panel.add(boton5);
+        marco.add(panel);
+        pecharVentana();
+    }
+    
+    public void distribucionBorderLayout(){
+        iniciarComponentes();
+        panel.setLayout(new BorderLayout());
+        panel.add(boton1, BorderLayout.NORTH);
+        panel.add(boton2, BorderLayout.SOUTH);
+        panel.add(boton3, BorderLayout.CENTER);
+        panel.add(boton4,  BorderLayout.EAST);
+        panel.add(boton5,  BorderLayout.WEST);
+        marco.add(panel);
+        pecharVentana();
+    }
+    
+    public void distribuidorGridLayout(){
+        iniciarComponentes();
+        panel.setLayout(new GridLayout(3,4));
+        panel.add(boton1);
+        panel.add(boton2);
+        panel.add(boton3);
+        panel.add(boton4);
+        panel.add(boton5);
+        marco.add(panel);
+        pecharVentana();
     }
     
     

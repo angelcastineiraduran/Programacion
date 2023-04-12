@@ -13,7 +13,10 @@ import layouts.*;
 public class Parte3 {
     public static void main(String[] args) {
         Layouts layout = new Layouts();
-        layout.distribuidorLayout();
+        //layout.distribuidorLayout();
+        //layout.distribuidorLayout_v2();
+        //layout.distribuidorBoxLayout();
+        layout.distribucionBorderLayout();
     }
     
 }
