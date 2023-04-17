@@ -69,19 +69,19 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="campoPassword" max="32767" attributes="0"/>
-                                      <Component id="nomeLinea" max="32767" attributes="0"/>
+                                      <Component id="campoNome" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                          <Component id="boton1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonPremer" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                          <Component id="boton2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonLimpiar" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="88" max="32767" attributes="0"/>
+                  <EmptySpace pref="77" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -90,7 +90,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="nomeLinea" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="campoNome" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="etiqueta1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -102,8 +102,8 @@
                   <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="boton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="boton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButtonPremer" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButtonLimpiar" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
               </Group>
@@ -137,20 +137,20 @@
             <Property name="text" type="java.lang.String" value="PASSWORD"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="boton1">
+        <Component class="javax.swing.JButton" name="jButtonPremer">
           <Properties>
             <Property name="text" type="java.lang.String" value="PREMER"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="boton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonPremerActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="boton2">
+        <Component class="javax.swing.JButton" name="jButtonLimpiar">
           <Properties>
-            <Property name="text" type="java.lang.String" value="SAIR"/>
+            <Property name="text" type="java.lang.String" value="LIMPIAR"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="boton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLimpiarActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -169,7 +169,10 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JTextField" name="nomeLinea">
+        <Component class="javax.swing.JTextField" name="campoNome">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoNomeActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JPasswordField" name="campoPassword">
           <Events>

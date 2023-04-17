@@ -29,11 +29,11 @@ public class Ventana extends javax.swing.JFrame {
         panel = new javax.swing.JPanel();
         etiqueta1 = new javax.swing.JLabel();
         etiqueta2 = new javax.swing.JLabel();
-        boton1 = new javax.swing.JButton();
-        boton2 = new javax.swing.JButton();
+        jButtonPremer = new javax.swing.JButton();
+        jButtonLimpiar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        nomeLinea = new javax.swing.JTextField();
+        campoNome = new javax.swing.JTextField();
         campoPassword = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,17 +55,17 @@ public class Ventana extends javax.swing.JFrame {
         etiqueta2.setForeground(new java.awt.Color(255, 0, 0));
         etiqueta2.setText("PASSWORD");
 
-        boton1.setText("PREMER");
-        boton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonPremer.setText("PREMER");
+        jButtonPremer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boton1ActionPerformed(evt);
+                jButtonPremerActionPerformed(evt);
             }
         });
 
-        boton2.setText("SAIR");
-        boton2.addActionListener(new java.awt.event.ActionListener() {
+        jButtonLimpiar.setText("LIMPIAR");
+        jButtonLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boton2ActionPerformed(evt);
+                jButtonLimpiarActionPerformed(evt);
             }
         });
 
@@ -73,6 +73,12 @@ public class Ventana extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jTextArea1.setText("Area de texto");
         jScrollPane1.setViewportView(jTextArea1);
+
+        campoNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoNomeActionPerformed(evt);
+            }
+        });
 
         campoPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,20 +104,20 @@ public class Ventana extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(campoPassword)
-                                    .addComponent(nomeLinea)))))
+                                    .addComponent(campoNome)))))
                     .addGroup(panelLayout.createSequentialGroup()
                         .addGap(68, 68, 68)
-                        .addComponent(boton1)
+                        .addComponent(jButtonPremer)
                         .addGap(77, 77, 77)
-                        .addComponent(boton2)))
-                .addContainerGap(88, Short.MAX_VALUE))
+                        .addComponent(jButtonLimpiar)))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         panelLayout.setVerticalGroup(
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nomeLinea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(etiqueta1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -121,8 +127,8 @@ public class Ventana extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(boton1)
-                    .addComponent(boton2))
+                    .addComponent(jButtonPremer)
+                    .addComponent(jButtonLimpiar))
                 .addGap(50, 50, 50))
         );
 
@@ -147,17 +153,23 @@ public class Ventana extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_panelComponentRemoved
 
-    private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
+    private void jButtonPremerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPremerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_boton1ActionPerformed
+    }//GEN-LAST:event_jButtonPremerActionPerformed
 
-    private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
+    private void jButtonLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimpiarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_boton2ActionPerformed
+        campoNome.setText("");
+        campoPassword.setText("");
+    }//GEN-LAST:event_jButtonLimpiarActionPerformed
 
     private void campoPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPasswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoPasswordActionPerformed
+
+    private void campoNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -195,14 +207,14 @@ public class Ventana extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton boton1;
-    private javax.swing.JButton boton2;
+    private javax.swing.JTextField campoNome;
     private javax.swing.JPasswordField campoPassword;
     private javax.swing.JLabel etiqueta1;
     private javax.swing.JLabel etiqueta2;
+    private javax.swing.JButton jButtonLimpiar;
+    private javax.swing.JButton jButtonPremer;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField nomeLinea;
     private javax.swing.JPanel panel;
     // End of variables declaration//GEN-END:variables
 }
