@@ -135,7 +135,7 @@ public class Ventana extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(botonAgregarTaboa)
                     .addComponent(desplegableDam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
             .addComponent(jScrollPane1)
         );
         jPanel1Layout.setVerticalGroup(
@@ -144,9 +144,9 @@ public class Ventana extends javax.swing.JFrame {
                 .addGap(53, 53, 53)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(etiquetaNombre)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(campoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(desplegableDam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(desplegableDam, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(campoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
@@ -165,7 +165,7 @@ public class Ventana extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,12 +186,19 @@ public class Ventana extends javax.swing.JFrame {
     private void desplegableDamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desplegableDamActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_desplegableDamActionPerformed
-
+    /**
+     * Añade registros a la tabal una vez se pulsa ese botón. Una vez añadidos se borra
+     * los campos de los que cogio los registros
+     * 
+     * la clase <code>DefaultTableModel</code> se utiliza en java para editar tablas GUI
+     * 
+     * @param evt 
+     */
     private void botonAgregarTaboaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarTaboaActionPerformed
         String nombre = campoNombre.getText();
         String apellido = campoApelido.getText();
         String curso = (String) desplegableDam.getSelectedItem();
-
+        
         Object[] fila = {nombre, apellido, curso};
 
         DefaultTableModel modelo = (DefaultTableModel) tablaRegistros.getModel();
