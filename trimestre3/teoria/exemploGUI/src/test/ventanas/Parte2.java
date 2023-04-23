@@ -2,21 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package test;
-
-
-import layouts.*;
+package test.ventanas;
+import componentes.*;
 /**
  *
  * @author dam1
  */
-public class Parte3 {
+public class Parte2 {
     public static void main(String[] args) {
-        Layouts layout = new Layouts();
-        //layout.distribuidorLayout();
-        //layout.distribuidorLayout_v2();
-        //layout.distribuidorBoxLayout();
-        layout.distribucionBorderLayout();
+        // por defecto se distribuye horizontalmente
+        Componentes componentes = new Componentes();
+        componentes.iniciarComponentes();
+        
+        
     }
     
 }

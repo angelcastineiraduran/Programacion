@@ -105,6 +105,9 @@ public class Layouts {
         pecharVentana();
     }
     
+    /**
+     * te distribuye los botones como si fuera una estanteria
+     */
     public void distribuidorGridLayout(){
         iniciarComponentes();
         panel.setLayout(new GridLayout(3,4));

@@ -50,7 +50,7 @@ public class EventoClaseAnonima {
         bSair.setText(" SAIR "); // ponemos el texto aqui, para comprobar que tambien es posible
         bSair.setToolTipText("saimos do programa"); // cd ponemos cursor encima nos muestra eso
 
-        //XESTION DE EVENTOS NUNHA CLASE INTERNA
+        // XESTION DE EVENTOS NUNHA CLASE INTERNA
         bCopiar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

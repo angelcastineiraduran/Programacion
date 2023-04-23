@@ -9,7 +9,9 @@ import javax.swing.*;
 
 
 /**
- *
+ * creamos elementos del marco y los distrubuimos a nuestra forma anulado la distribucion 
+ * predeterminada "layout"
+ * 
  * @author dam1
  */
 public class Componentes {
