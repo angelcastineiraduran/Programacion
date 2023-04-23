@@ -13,7 +13,7 @@ public class Test {
         Historial historial = new Historial();
         historial.getHistorial(2, 1, 0, 3);
         //String registros = historial.getHistorialText();
-        System.out.println("historial = " + registros);
+        //System.out.println("historial = " + registros);
         
     }
     
