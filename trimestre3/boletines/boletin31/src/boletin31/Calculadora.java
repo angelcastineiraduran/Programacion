@@ -70,7 +70,6 @@ public class Calculadora extends javax.swing.JFrame {
         botonMultiplicacion = new javax.swing.JButton();
         botonResta = new javax.swing.JButton();
         botonSuma = new javax.swing.JButton();
-        botonHistorial = new javax.swing.JButton();
         pantalla = new javax.swing.JTextField();
         campoRegistros = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -258,30 +257,13 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
-        botonHistorial.setBackground(new java.awt.Color(255, 153, 0));
-        botonHistorial.setForeground(new java.awt.Color(255, 255, 255));
-        botonHistorial.setText("Historial");
-        botonHistorial.setToolTipText("");
-        botonHistorial.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonHistorialActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(botonAC, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(botonOFF, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(botonHistorial, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(boton7, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -297,12 +279,6 @@ public class Calculadora extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(botonMultiplicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(boton8, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(boton9, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(botonDivision, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addComponent(boton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -315,7 +291,22 @@ public class Calculadora extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(botonSuma, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(botonResta, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(botonResta, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(90, 90, 90)
+                                .addComponent(boton8, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(62, 62, 62)
+                                .addComponent(botonAC, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botonOFF, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(boton9, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(botonDivision, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(0, 37, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -324,8 +315,7 @@ public class Calculadora extends javax.swing.JFrame {
                 .addContainerGap(28, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonAC)
-                    .addComponent(botonOFF)
-                    .addComponent(botonHistorial))
+                    .addComponent(botonOFF))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(boton7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -419,6 +409,7 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void botonOFFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonOFFActionPerformed
         // TODO add your handling code here:
+        System.exit(EXIT_ON_CLOSE);
 
     }//GEN-LAST:event_botonOFFActionPerformed
 
@@ -532,13 +523,6 @@ public class Calculadora extends javax.swing.JFrame {
             pantalla.setText(String.valueOf(operadores[1]));
         }
     }//GEN-LAST:event_boton3ActionPerformed
-
-    private void botonHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonHistorialActionPerformed
-        // TODO add your handling code here:
-        for (String registro : registrosPantalla) {
-            pantalla.setText(registro);
-        }
-    }//GEN-LAST:event_botonHistorialActionPerformed
 
     private void campoRegistrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoRegistrosActionPerformed
         // TODO add your handling code here:
@@ -670,7 +654,6 @@ public class Calculadora extends javax.swing.JFrame {
     private javax.swing.JButton botonAC;
     private javax.swing.JButton botonComa;
     private javax.swing.JButton botonDivision;
-    private javax.swing.JButton botonHistorial;
     private javax.swing.JButton botonIgual1;
     private javax.swing.JButton botonMultiplicacion;
     private javax.swing.JButton botonMultiplicacion1;
