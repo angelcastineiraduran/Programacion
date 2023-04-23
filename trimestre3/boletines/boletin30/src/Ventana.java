@@ -50,6 +50,7 @@ public class Ventana extends javax.swing.JFrame {
         etiquetaApelido.setText("APELIDO");
 
         campoNombre.setBackground(new java.awt.Color(255, 255, 255));
+        campoNombre.setForeground(new java.awt.Color(0, 0, 0));
         campoNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoNombreActionPerformed(evt);
@@ -57,6 +58,7 @@ public class Ventana extends javax.swing.JFrame {
         });
 
         campoApelido.setBackground(new java.awt.Color(255, 255, 255));
+        campoApelido.setForeground(new java.awt.Color(0, 0, 0));
         campoApelido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoApelidoActionPerformed(evt);
