@@ -341,7 +341,6 @@ public class Calculadora extends javax.swing.JFrame {
         
     }//GEN-LAST:event_pantallaComponentAdded
     private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-
         pantalla.setText("hola");
     }  
     private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {                                       
