@@ -12,7 +12,7 @@ public class Ventana1 {
     public void iniciarVentana() {
         marco = new JFrame("Primeira ventana");
         marco.setSize(800, 400);
-        marco.setLocationRelativeTo(marco);
+        marco.setLocationRelativeTo(marco); // me centra la ventana
         
         //lineas importantes
         marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
