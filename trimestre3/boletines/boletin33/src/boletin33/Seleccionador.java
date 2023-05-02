@@ -8,43 +8,41 @@ package boletin33;
  *
  * @author dam1
  */
-public class Entrenador extends SeleccionFutbol{
-    private Integer idFedereacion;
+public class Seleccionador extends SeleccionFutbol{
 
     @Override
     public void concentrarse() {
-        System.out.println("concentrase o entrenador");
+        System.out.println("concentrase en seleccionar bos xogadores");
     }
 
     @Override
     public void viajar() {
-        System.out.println("viaja o entrenador");
+        System.out.println("viaja para seleccinar xogadores");
     }
 
     @Override
     public void entrenar() {
-        System.out.println("non entrena o entrenador");
+        System.out.println("seleccionador no entrena cos xogadores");
     }
 
     @Override
     public void jugarPartido() {
-        System.out.println("non xoga o entrenador");
+        System.out.println("seleccionador no xoga os partidos");
     }
     
-    public void planificarEntrenamiento(){
-        System.out.println("planifica entreno entrenador");
-        
+    public void seleccionarXogador(){
+        System.out.println("selecciona xogador");
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Entrenador{");
-        sb.append("idFedereacion=").append(idFedereacion);
+        sb.append("Seleccionador{");
         sb.append(", =").append(super.toString());
         sb.append('}');
         return sb.toString();
     }
+    
     
     
 }
