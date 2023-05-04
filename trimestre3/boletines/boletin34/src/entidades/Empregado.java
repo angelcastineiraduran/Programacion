@@ -13,5 +13,17 @@ public abstract class Empregado {
     protected String nome;
     protected String apelido;
     protected String dataIngreso;
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Empregado{");
+        sb.append("dni=").append(dni);
+        sb.append(", nome=").append(nome);
+        sb.append(", apelido=").append(apelido);
+        sb.append(", dataIngreso=").append(dataIngreso);
+        sb.append('}');
+        return sb.toString();
+    }
     
 }
