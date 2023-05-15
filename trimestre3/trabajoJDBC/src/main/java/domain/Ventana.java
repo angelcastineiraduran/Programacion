@@ -20,6 +20,7 @@ import javax.swing.table.DefaultTableModel;
  * @author ubuntu
  */
 import java.util.*;
+
 public class Ventana extends javax.swing.JFrame {
 
     DefaultTableModel dtm = new DefaultTableModel();
@@ -32,6 +33,7 @@ public class Ventana extends javax.swing.JFrame {
     PersonaDAO personaDAO = new PersonaDAO();
     RegistrosTotales o = new RegistrosTotales();
     Integer i = 0;
+
     public Ventana() {
         initComponents();
         String[] titulo = new String[]{"Numero", "Nombre", "Apellido", "Importe", "Detalles"};
@@ -42,10 +44,9 @@ public class Ventana extends javax.swing.JFrame {
 //        for(Persona persona : personas){
 //            dtm.addRow(new Object{"x",persona.getNombre(),persona.getApellido(),persona.getImporte(),persona.getDetalles()});
 //        }
-        
+
         personas.forEach((lista) -> {
-            
-            
+
             Integer numero = listaNumeros.get(i);
             String nombre = lista.getNombre();
             String apellido = lista.getApellido();
@@ -62,7 +63,7 @@ public class Ventana extends javax.swing.JFrame {
         //this.persona = new Persona(campoNombre.getText(),campoApellido.getText(),Integer.parseInt(campoImporte.getText()),campoDetalles.getText());
         //dtm.addRow(new Object[]{null,persona.getNombre(),persona.getApellido(),persona.getImporte(),persona.getDetalles()});
         try {
-            
+
             String nombre = campoNombre.getText();
             String apellido = campoApellido.getText();
             Integer importe = Integer.parseInt(campoImporte.getText());
@@ -72,8 +73,8 @@ public class Ventana extends javax.swing.JFrame {
             Persona persona = new Persona(nombre, apellido, importe, detalles);
             pd.insertar(persona);
             i++;
-            dtm.addRow(new Object[]{i,nombre, apellido, importe, detalles});
-            
+            dtm.addRow(new Object[]{i, nombre, apellido, importe, detalles});
+
         } catch (Exception ex) {
             ex.printStackTrace();
             JOptionPane.showMessageDialog(null, "Alguno de los campos no tiene el formato adecuado");
@@ -83,12 +84,11 @@ public class Ventana extends javax.swing.JFrame {
 
     void eliminar() {
         int fila = tblDatos.getSelectedRow();
-        Integer valor = (Integer)tblDatos.getValueAt(fila, 0);
+        Integer valor = (Integer) tblDatos.getValueAt(fila, 0);
         dtm.removeRow(fila);
-        
+
         personaDAO.borrar(valor);
-        
-        
+
     }
 
     void actualizar() {
@@ -359,7 +359,7 @@ public class Ventana extends javax.swing.JFrame {
     private void bEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEliminarActionPerformed
         // TODO add your handling code here:
         eliminar();
-        
+
 
     }//GEN-LAST:event_bEliminarActionPerformed
 
