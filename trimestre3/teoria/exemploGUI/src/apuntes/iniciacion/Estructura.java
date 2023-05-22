@@ -9,7 +9,7 @@ package apuntes.iniciacion;
  * @author ubuntu
  */
 import javax.swing.*;
-public class Eventos {
+public class Estructura {
     public static void main(String[] args) {
         // CODIGO PILDORAS
         //MiMarco miMarco = new MiMarco();
